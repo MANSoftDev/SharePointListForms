@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" 
+      Title="CP Project Base List Def" 
+      FolderCreation="FALSE" 
+      Direction="$Resources:Direction;" 
+      Url="Lists/SharePointListForms-CPProjectListDef" 
+      BaseType="0" 
+      xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x0100b10e34ab90214c4fa9efbb7653c208d8" 
+                   Name="CP Project" 
+                   Group="Code Project" 
+                   Description="Demo contenttype for CodeProject article" 
+                   Inherits="TRUE" 
+                   Version="0">
+        <FieldRefs>
+          <FieldRef ID="{a9f5f963-cd43-437f-9832-fa340e50334a}" Name="ProjectName" DisplayName="Name" />
+          <FieldRef ID="{c55b0ed1-c874-491e-914d-621abd9066f6}" Name="ProjectDescription" DisplayName="Description" />
+          <FieldRef ID="{64CD368D-2F95-4BFC-A1F9-8D4324ECB007}" Name="StartDate" DisplayName="Start" />
+          <FieldRef ID="{8A121252-85A9-443D-8217-A1B57020FADF}" Name="_EndDate" DisplayName="End" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{a9f5f963-cd43-437f-9832-fa340e50334a}" Name="ProjectName" DisplayName="Name" Group="Code Project" Type="Text" />
+      <Field ID="{c55b0ed1-c874-491e-914d-621abd9066f6}" Name="ProjectDescription" DisplayName="Description" Group="Code Project" Type="Note" />
+      <Field ID="{8A121252-85A9-443d-8217-A1B57020FADF}" Name="_EndDate" 
+             Group="$Resources:core,Base_Columns;" Type="DateTime" 
+             DisplayName="$Resources:core,End_Date;" 
+             Format="DateTime" 
+             SourceID="http://schemas.microsoft.com/sharepoint/v3/fields" 
+             StaticName="_EndDate">
+        <Default>[today]</Default>
+      </Field>
+      <Field ID="{64cd368d-2f95-4bfc-a1f9-8d4324ecb007}" Name="StartDate" 
+             SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+             StaticName="StartDate" 
+             Group="$Resources:core,Base_Columns;" 
+             Type="DateTime" Format="DateOnly" 
+             DisplayName="$Resources:core,Start_Date;">
+        <Default>[today]</Default>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="Attachments">
+          </FieldRef>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

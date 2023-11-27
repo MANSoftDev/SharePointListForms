@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100b10e34ab90214c4fa9efbb7653c20810"
+               Name="CP Project WebPart"
+               Group="Code Project"
+               Description="Demo contenttype for CodeProject article"
+               Inherits="True"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{a9f5f963-cd43-437f-9832-fa340e50334a}" Name="ProjectName" DisplayName="Name"/>
+      <FieldRef ID="{c55b0ed1-c874-491e-914d-621abd9066f6}" Name="ProjectDescription" DisplayName="Description"/>
+      <FieldRef ID="{64CD368D-2F95-4BFC-A1F9-8D4324ECB007}" Name="StartDate" DisplayName="Start"/>
+      <FieldRef ID="{8A121252-85A9-443D-8217-A1B57020FADF}" Name="_EndDate" DisplayName="End"/>
+    </FieldRefs>
+  </ContentType>
+</Elements>

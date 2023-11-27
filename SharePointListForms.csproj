@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{247EEFA1-40B5-42E3-A0DB-B3FA18D27789}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharePointListForms</RootNamespace>
+    <AssemblyName>SharePointListForms</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlTemplates\CPRenderingTemplate.ascx.cs">
+      <DependentUpon>CPRenderingTemplate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\CPRenderingTemplate.ascx.designer.cs">
+      <DependentUpon>CPRenderingTemplate.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\SharePointListForms\CPNewItem.aspx.cs">
+      <DependentUpon>CPNewItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SharePointListForms\CPNewItem.aspx.designer.cs">
+      <DependentUpon>CPNewItem.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Application Page\CP Project App Page Def\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{16eafb01-ed87-4f8b-b3f9-a7ee4948531f}</SharePointProjectItemId>
+    </None>
+    <None Include="Application Page\CP Project App Page\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5b4a44ed-90dd-4fa8-8e1e-0955df9e5d99}</SharePointProjectItemId>
+    </None>
+    <None Include="ControlTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c3478360-ea4c-41dc-a5c0-8a07e1521054}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature4\Feature4.feature">
+      <FeatureId>{2e5cadc2-6622-425b-8b88-ce37a3972d89}</FeatureId>
+    </None>
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e3aba89b-71bb-4a6d-895d-acc522f356ee}</SharePointProjectItemId>
+    </None>
+    <None Include="RenderTemplate\CP Project Rendering Template Def\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{108ff6e1-cf99-4672-b16a-d74460df62ad}</SharePointProjectItemId>
+    </None>
+    <None Include="RenderTemplate\CP Project Rendering Template\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3007aa31-10b7-4b1b-9f97-f4edd6fbd151}</SharePointProjectItemId>
+    </None>
+    <None Include="WebPart\CP Project WebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d9e214a4-4439-47f9-9bd1-d4dfa7b861b7}</SharePointProjectItemId>
+    </None>
+    <None Include="Hidden\CP Project Hidden List Def\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a00fffd8-f432-44ad-9d50-23e09d558fe7}</SharePointProjectItemId>
+    </None>
+    <None Include="Hidden\CP Project Hidden\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{37474181-93f4-4674-8412-b9e261873382}</SharePointProjectItemId>
+    </None>
+    <None Include="Base\CP Project Base\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fc7ab7e4-8755-4d90-a9d9-8f7c7fe99128}</SharePointProjectItemId>
+    </None>
+    <None Include="WebPart\CP Project WebPart List Def\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{09d85a1a-ec20-4e6c-99f5-6f7e38449093}</SharePointProjectItemId>
+    </None>
+    <None Include="Base\CP Project Base List Def\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e5f1156f-ca21-4a5e-9de7-b0e774365914}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{f77e0806-627b-4909-80d6-0c849fff33b8}</FeatureId>
+    </None>
+    <None Include="Features\Feature2\Feature2.feature">
+      <FeatureId>{06679e37-6257-490f-a61e-83e0b5eed832}</FeatureId>
+    </None>
+    <None Include="Features\Feature3\Feature3.feature">
+      <FeatureId>{07e912ca-e53c-4cfb-a5cf-4de8b770fe34}</FeatureId>
+    </None>
+    <None Include="Fields\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3da8ebe9-6f26-445d-be2a-42ea544be348}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{3b3f63e0-cb0a-4a5c-b25c-865bf8e3c3ff}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Application Page\CP Project App Page Def\Elements.xml" />
+    <Content Include="Application Page\CP Project App Page Def\Schema.xml" />
+    <Content Include="Application Page\CP Project App Page\Elements.xml" />
+    <Content Include="ControlTemplates\CPRenderingTemplate.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Features\Feature4\Feature4.Template.xml">
+      <DependentUpon>Feature4.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\SharePointListForms\CPNewItem.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="RenderTemplate\CP Project Rendering Template Def\Elements.xml" />
+    <Content Include="RenderTemplate\CP Project Rendering Template Def\Schema.xml" />
+    <Content Include="RenderTemplate\CP Project Rendering Template\Elements.xml" />
+    <Content Include="WebPart\CP Project WebPart\Elements.xml" />
+    <Content Include="Hidden\CP Project Hidden List Def\Elements.xml" />
+    <Content Include="Hidden\CP Project Hidden List Def\Schema.xml" />
+    <Content Include="Hidden\CP Project Hidden\Elements.xml" />
+    <Content Include="Base\CP Project Base\Elements.xml" />
+    <Content Include="WebPart\CP Project WebPart List Def\Elements.xml" />
+    <Content Include="WebPart\CP Project WebPart List Def\Schema.xml" />
+    <Content Include="Base\CP Project Base List Def\Elements.xml" />
+    <Content Include="Base\CP Project Base List Def\Schema.xml" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature2\Feature2.Template.xml">
+      <DependentUpon>Feature2.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature3\Feature3.Template.xml">
+      <DependentUpon>Feature3.feature</DependentUpon>
+    </Content>
+    <Content Include="Fields\Elements.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
+</Project>

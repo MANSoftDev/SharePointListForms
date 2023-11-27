@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field ID="{a9f5f963-cd43-437f-9832-fa340e50334a}" Name="ProjectName" DisplayName="Name" Group="Code Project" Type="Text"/>
+  <Field ID="{c55b0ed1-c874-491e-914d-621abd9066f6}" Name="ProjectDescription" DisplayName="Description" Group="Code Project" Type="Note"/>
+</Elements>

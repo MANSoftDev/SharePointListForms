@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="3b3f63e0-cb0a-4a5c-b25c-865bf8e3c3ff" solutionId="3b3f63e0-cb0a-4a5c-b25c-865bf8e3c3ff" resetWebServer="false" name="SharePointListForms" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="f77e0806-627b-4909-80d6-0c849fff33b8" />
+    <featureReference itemId="06679e37-6257-490f-a61e-83e0b5eed832" />
+    <featureReference itemId="07e912ca-e53c-4cfb-a5cf-4de8b770fe34" />
+    <featureReference itemId="2e5cadc2-6622-425b-8b88-ce37a3972d89" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="c3478360-ea4c-41dc-a5c0-8a07e1521054" />
+    <projectItemReference itemId="e3aba89b-71bb-4a6d-895d-acc522f356ee" />
+  </projectItems>
+</package>
